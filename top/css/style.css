@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*リセットCSS（sanitize.css）の読み込み
+---------------------------------------------------------------------------*/
+@import url("https://unpkg.com/sanitize.css");
+
+
+/*Font Awesomeの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {
+	font-size: 20px;	/*基準となるフォントサイズ。*/
+	height: 100%;
+}
+
+body {
+	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;	/*フォント種類（ゴシック）*/
+	-webkit-text-size-adjust: none;
+	color: #555;		/*文字色*/
+	line-height: 2;		/*行間*/
+}
+
+/*リセット*/
+figure {margin: 0;}
+dd {margin: 0;}
+nav {margin: 0;padding: 0;}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+/*他*/
+input {font-size: 1rem;}
+section + section {
+	margin-top: 3rem;
+}
+
+/*見出し設定*/
+h2{
+	font-size: 1em;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+	margin-top: 70px;
+	text-align: center;
+}
+
+
+
+/*リンクテキスト全般の設定
+---------------------------------------------------------------------------*/
+a {
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+}
+
+a:hover {
+	opacity: 0.4;	/*マウスオン時に80%の透明度にする*/
+}
+
+
+/*container
+---------------------------------------------------------------------------*/
+#container {
+	max-width: 1800px;	/*サイトの最大幅。これ以上広がらない。*/
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+/*header
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+header {
+	padding: 20px 3%;			/*上下、左右へのヘッダー内の余白*/
+	background: #555;		/*背景色*/
+	color: #fff;				/*文字色*/
+}
+
+/*h1タグ*/
+header h1 {
+	text-align: center;			/*テキストの位置*/
+    font-size: 50px;            /*テキストの大きさ*/
+}
+
+/*h4タグ*/
+header h4 {
+	text-align: center;			/*テキストの位置*/
+	font-size: 20px;			/*テキストの大きさ*/
+}
+
+
+/*mainブロック設定
+---------------------------------------------------------------------------*/
+/*mainブロックの設定*/
+main {
+	margin-left: 10%;	/*ブロックの外側に空けるスペース*/
+	margin-right: 10%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/*pタグ*/
+main p {
+	margin: 0 1rem 2rem;	/*pの外側にとるスペース。上、左右、下への順番。*/
+}
+
+/*微調整*/
+main p + p {
+	margin-top: -1rem;	/*段落が続いた場合に、少し上に詰める。*/
+}
+
+#topImg {
+	width: 100%;
+}
+
+
+/*デジタル時計
+---------------------------------------------------------------------------*/
+.clock-frame {
+    width: 110px;
+    height: 30px;
+    border: 2px solid lightgray;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+}
+  
+.clock {
+    font-size: 20px;
+    color: #000000;
+}
+
+/*おみくじ
+---------------------------------------------------------------------------*/
+.omikuji img {
+    width: 100px;
+}
+
+/*アラート表示*/
+.container1 {
+    margin-top: 100px;
+}
+
+input, button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+.pagetop-show {display: block;}
+
+/*ボタンの設定*/
+.pagetop a {
+	display: block;text-decoration: none;text-align: center;z-index: 99;
+	position: fixed;	/*スクロールに追従しない(固定で表示)為の設定*/
+	right: 20px;		/*右からの配置場所指定*/
+	bottom: 20px;		/*下からの配置場所指定*/
+	color: #fff;		/*文字色*/
+	font-size: 1.5em;	/*文字サイズ*/
+	background: rgba(0,0,0,0.2);	/*背景色。0,0,0は黒の事で0.2は色が20%出た状態。*/
+	width: 60px;		/*幅*/
+	line-height: 60px;	/*高さ*/
+	border-radius: 50%;	/*円形にする*/
+}

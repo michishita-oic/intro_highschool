@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kouyouda yo!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-text {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header-text h2 {
+            margin: 0;
+            display: inline;
+        }
+
+        .header-text .author {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        .nav ul li {
+            margin: 0;
+        }
+
+        .nav ul li a {
+            color: white;
+            padding: 14px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        #image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #kouyou-image {
+            max-width: 100%;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+        }
+
+        #kouyou-image.hidden {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+        }
+
+        #toggle-button {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #toggle-button:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer .nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .nav ul li {
+            margin: 0 10px;
+        }
+
+        footer .gotop {
+            margin: 10px 0;
+        }
+
+        footer .gotop a img {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body id="top">
+    <div class="header-text">
+        <h2 class="hero index">喜友名の出身校紹介ページ</h2>
+        <span class="author">(作成者：河合)</span>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="kyuuna.html">ホーム</a></li>
+            <li><a href="bukatu.html">野球部</a></li>
+            <li><a href="kouyouaccess.html">アクセス</a></li>
+        </ul>
+    </nav>
+
+    <!-- メイン -->
+    <main>
+        <!-- 画像表示エリア -->
+        <div id="image-container">
+            <img id="kouyou-image" src="image/kouyou.jpg" alt="kouyou">
+        </div>
+        <!-- トグルボタン -->
+        <button id="toggle-button">画像の表示/非表示</button>
+        
+        <p>
+            学校名：岡山県立興陽高等学校<br/>
+            創立：１０７年くらい<br/>
+            所属していたクラス：３年Ｍ組<br/>
+            所属していた部活：野球部<br/>
+            発生した事件：ロレックス裏拳事件（野球部）<br/>
+            特徴：盗難が絶えない学校 部活いっぱいある<br/>
+        </p>
+        <ul>
+            <h2>班員からのコメント</h2>
+        <div class="comment-box">
+            <span class="comment-user">喜友名</span>
+            <div class="comment">
+                危ない学校だなと感じた、辛く苦しい３年間を思い出す内容だった。なんでここに通ってたんだろう、、、
+            </div>
+        </div>
+
+        <div class="comment-box">
+            <span class="comment-user">金田</span>
+            <div class="comment">
+                盗難が絶えないのヤバすぎる
+            </div>
+        </div>
+
+        <div class="comment-box">
+            <span class="comment-user">道下</span>
+            <div class="comment">
+                北九州レベルの治安、そこからうまれた優等生、世界の神秘だね。
+            </div>
+        </div>
+
+        <div class="comment-box">
+            <span class="comment-user">河合（作成者）</span>
+            <div class="comment">
+                ロレックス裏拳事件は平手打ちとして報道されたらしい
+            </div>
+        </div>
+
+        </ul>
+    </main>
+    <!-- メインここまで -->
+
+    <!-- フッター -->
+    <footer>
+        <nav class="nav">
+            <ul>
+                <li><a href="../mitti/mitti.html">みっちー</a></li>
+                <li><a href="../kaneda/kawai.html">かわい</a></li>
+                <li><a href="../mimasakaHighSchool/kaneda.html">かねだ</a></li>
+                <li><a href="../top/index.html">TOPへ戻る</a></li>
+            </ul>
+        </nav>
+        
+        <p class="copyright">&copy; oic group4</p>
+    </footer>
+    <!-- フッターここまで -->
+
+    <script>
+        document.getElementById('toggle-button').addEventListener('click', function() {
+            var image = document.getElementById('kouyou-image');
+            if (image.classList.contains('hidden')) {
+                image.classList.remove('hidden');
+            } else {
+                image.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+/*リセットCSS（sanitize.css）の読み込み
+---------------------------------------------------------------------------*/
+@import url("https://unpkg.com/sanitize.css");
+
+
+/*Font Awesomeの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {
+	font-size: 25px;	/*基準となるフォントサイズ。*/
+	height: 100%;
+}
+
+body {
+	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;	/*フォント種類（ゴシック）*/
+	-webkit-text-size-adjust: none;
+	background: #fff;	/*背景色*/
+	color: #555;		/*文字色*/
+	line-height: 2;		/*行間*/
+}
+
+/*リセット*/
+figure {margin: 0;}
+dd {margin: 0;}
+nav {margin: 0;padding: 0;}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+/*他*/
+input {font-size: 1rem;}
+section + section {
+	margin-top: 3rem;
+}
+
+
+/*リンクテキスト全般の設定
+---------------------------------------------------------------------------*/
+a {
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+}
+
+a:hover {
+	opacity: 0.4;	/*マウスオン時に80%の透明度にする*/
+}
+
+
+/*container
+---------------------------------------------------------------------------*/
+#container {
+	max-width: 1800px;	/*サイトの最大幅。これ以上広がらない。*/
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+
+/*header
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+header {
+	padding: 20px 3%;			/*上下、左右へのヘッダー内の余白*/
+	background: #4b3255;		/*背景色*/
+	color: #fff;				/*文字色*/
+}
+
+/*h1タグ*/
+header h1 {
+	text-align: center;			/*テキストの位置*/
+}
+
+/*h4タグ*/
+header h4 {
+	text-align: center;			/*テキストの位置*/
+	font-size: 20px;			/*テキストの大きさ*/
+}
+
+/*mainブロック設定
+---------------------------------------------------------------------------*/
+/*mainブロックの設定*/
+main {
+	margin-left: 10%;	/*ブロックの外側に空けるスペース*/
+	margin-right: 10%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/*pタグ*/
+main p {
+	margin: 0 1rem 2rem;	/*pの外側にとるスペース。上、左右、下への順番。*/
+}
+
+/*微調整*/
+main p + p {
+	margin-top: -1rem;	/*段落が続いた場合に、少し上に詰める。*/
+}
+
+#topImg {
+	width: 100%;
+}
+
+.nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.nav ul li {
+	margin: 0;
+}
+
+.nav ul li a {
+	color: #ffffff;
+	padding: 14px 20px;
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/*本文ブロック
+---------------------------------------------------------------------------*/
+/*本文ブロック*/
+#new {
+	margin: 0;
+	display: flex;		/*flexボックスを使う指定*/
+	flex-wrap: wrap;	/*折り返す指定*/
+	padding: 0 1rem;	/*上下、左右へのボックス内の余白*/
+}
+
+/*日付(dt)、記事(dd)共通設定*/
+#new dt,
+#new dd {
+	padding: 5px 0;		/*上下、左右へのボックス内の余白*/
+}
+
+/*日付の横のマーク（共通設定）*/
+#new dt span {
+	display: none;	/*小さな端末では非表示にしておく。*/
+}
+
+/*日付(dt)設定*/
+#new dt {
+	width: 2rem;	/*幅。8文字(rem)分*/
+}
+
+/*記事(dd)設定*/
+#new dd {
+	width: calc(100% - 8rem);	/*「8rem」は上の「#new dt」のwidthの値です*/
+}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	/*日付(dt)設定*/
+	#new dt {
+		width: 10rem;	/*幅。10文字(rem)分。アイコン分も含んだ幅にします。*/
+		display: flex;	/*flexボックスを使う指定*/
+		justify-content: space-between;	/*日付とアイコンをそれぞれ端に寄せる*/
+	}
+
+	/*日付の横のマーク（共通設定）*/
+	#new dt span {
+		display: inline-block;	/*表示させる*/
+		width: 6rem;			/*幅。6文字(rem)分。*/
+		font-size: 0.8rem;		/*文字サイズを80%に。*/
+		text-align: center;		/*文字をセンタリング*/
+		align-self: flex-start;	/*高さを間延びさせない指定*/
+		line-height: 1.8;		/*行間を少し狭く*/
+		position: relative;top: 0.4rem;	/*上下の配置バランスの微調整*/
+		border-radius: 2px;		/*角を丸くする指定*/
+		border: 1px solid #999;	/*枠線の幅、線種、色*/
+		background: #fff;		/*背景色*/
+	}
+
+	/*icon-bg1設定。*/
+	#new dt span.icon-bg1 {
+		border: transparent;	/*枠線を透明にする*/
+		background: #4b3255;	/*背景色*/
+		color: #fff;			/*文字色*/
+	}
+
+	/*記事(dd)設定*/
+	#new dd {
+		width: calc(100% - 14rem);	/*「14rem」は上の「#new dt」のwidthの値です。*/
+	}
+
+	}/*画面幅900px以上の追加指定ここまで*/
+
+/*見出し設定*/
+h2{
+	color: #350647;
+	font-size: 1.8em;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+
+/*コメント設定*/
+.comment-box {
+	background-color: #f5f5f5;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px #878787;
+}
+
+.comment-user {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.comment {
+	line-height: 1.6;
+}
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer small {font-size: 100%;}
+
+footer {
+	font-size: 0.6rem;		/*文字サイズ*/
+	background: #4b3255;	/*背景色*/
+	color: #fff;			/*文字色*/
+	text-align: center;		/*テキストの位置*/
+	padding: 10px;			/*ボックス内の余白*/
+}
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+.pagetop-show {display: block;}
+
+/*ボタンの設定*/
+.pagetop a {
+	display: block;text-decoration: none;text-align: center;z-index: 99;
+	position: fixed;	/*スクロールに追従しない(固定で表示)為の設定*/
+	right: 20px;		/*右からの配置場所指定*/
+	bottom: 20px;		/*下からの配置場所指定*/
+	color: #fff;		/*文字色*/
+	font-size: 1.5em;	/*文字サイズ*/
+	background: rgba(0,0,0,0.2);	/*背景色。0,0,0は黒の事で0.2は色が20%出た状態。*/
+	width: 60px;		/*幅*/
+	line-height: 60px;	/*高さ*/
+	border-radius: 50%;	/*円形にする*/
+}

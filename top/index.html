@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>開発技術Git最終課題</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+    <!-- ヘッダー -->
+    <header class="header">
+        <!-- 秒まで表示する動く時計 -->
+        <div class="clock-frame">
+            <div class="clock"></div>
+        </div>
+
+        <h1>開発技術Git最終課題</h1>
+        <h4>作成者：金田 喜友名 河合 道下</h4>
+    </header>
+    <!-- ヘッダーここまで -->
+
+    <!-- メイン -->
+    <main>
+        <!-- 各リンク -->
+        <h2>学校紹介</h2>
+        <nav class="nav">
+            <ul>
+                <li><a href="../kaneda/kawai.html">河合の出身校紹介ページ(作成者：金田)</a></li>
+                <li><a href="../mitti/mitti.html">道下の出身校紹介ページ(作成者：喜友名)</a></li>
+                <li><a href="../kyuuna/kyuuna.html">喜友名の出身校紹介ページ(作成者：河合)</a></li>
+                <li><a href="../mimasakaHighSchool/kaneda.html">金田の出身校紹介ページ(作成者：道下)</a></li>
+            </ul>
+        </nav>
+
+        <!-- おみくじ -->
+        <h2>おみくじ</h2>
+        <div class="omikuji">
+            <img id="main" src="images/omikuji.png">
+            <input type="button" value="おみくじを引く" onClick="playOmikuji();">
+        </div>
+        
+        <!-- 押した数をカウントするボタン -->
+        <h2>押した数をカウントするボタン</h2>
+        <div>
+           <!-- ボタンを押した数を表示するための要素 -->
+          <p>ボタンを押した回数: <span id="count">0</span></p>
+          <input type="button" value="ボタンを押す" onClick="incrementCount();">
+            <!-- 上記ボタンのカウントをリセットするボタン -->
+            <input type="button" value="リセット" onClick="resetCount();">
+        </div>
+
+        <!-- テキストボックスに入力した数だけアラートメッセージを表示するボタン -->
+        <h2>テキストボックスに入力した数だけアラートメッセージを表示するボタン</h2>
+        <div class="container1">
+          <label for="alert-count">アラート回数を入力してください:</label>
+          <input type="number" id="alert-count" min="1" required>
+          <button id="alert-button">アラート表示</button>
+        </div>
+
+    </main>
+    <!-- メインここまで -->
+
+    <!-- フッター -->
+    <footer>
+       <!-- 背景色を切り替えるボタン -->
+       <div>
+        <BODY>
+            <P align="center"><FONT size="-1"></FONT></P>
+            <P align="center"><BR>
+            <BR>
+            </FONT></P>
+            <CENTER>
+            <TABLE cellpadding="0" cellspacing="0">
+              <TBODY>
+                <TR>
+                  <TD width="1" bgcolor="#009900"></TD>
+                  <TD height="1" bgcolor="#009900"></TD>
+                  <TD height="1" bgcolor="#009900"></TD>
+                  <TD height="1" bgcolor="#009900"></TD>
+                  <TD width="1" bgcolor="#009900"></TD>
+                </TR>
+                <TR>
+                  <TD width="1" bgcolor="#009900"></TD>
+                  <TD height="17" bgcolor="#005e00" colspan="3" align="center"><B><FONT size="-1" color="#ffffff">好きなのを選んでね</FONT></B></TD>
+                  <TD width="1" bgcolor="#009900"></TD>
+                </TR>
+                <TR>
+                  <TD width="1" bgcolor="#009900"></TD>
+                  <TD width="5" bgcolor="#ffffff"></TD>
+                  <TD height="15" bgcolor="#ffffff"></TD>
+                  <TD width="5" bgcolor="#ffffff"></TD>
+                  <TD width="1" bgcolor="#009900"></TD>
+                </TR>
+                <TR>
+                  <TD width="1" bgcolor="#009900"></TD>
+                  <TD width="10" bgcolor="#ffffff" height="15"></TD>
+                  <TD bgcolor="#ffffff" valign="middle">
+                  <FORM><INPUT type="button" value="ブラック" onclick="document.bgColor = '#000000';">　<INPUT type="button" value="ブルー" onclick="document.bgColor = '#0000FF';">　<INPUT type="button" value="グリーン" onclick="document.bgColor = '#00FF00';">　<INPUT type="button" value="イエロー" onclick="document.bgColor = '#FFFF00';">　<INPUT type="button" value="ピンク" onclick="document.bgColor = '#FF00FF';">　<INPUT type="button" value="ホワイト" onclick="document.bgColor = '#FFFFFF';"></FORM>
+                  </TD>
+                  <TD width="10" bgcolor="#ffffff"></TD>
+                  <TD width="1" bgcolor="#009900"></TD>
+                </TR>
+                <TR>
+                  <TD width="1" bgcolor="#009900"></TD>
+                  <TD width="5" bgcolor="#ffffff"></TD>
+                  <TD height="15" bgcolor="#ffffff"></TD>
+                  <TD width="5" bgcolor="#ffffff"></TD>
+                  <TD width="1" bgcolor="#009900"></TD>
+                </TR>
+                <TR>
+                  <TD width="1" bgcolor="#009900"></TD>
+                  <TD height="1" bgcolor="#009900"></TD>
+                  <TD height="1" bgcolor="#009900"></TD>
+                  <TD height="1" bgcolor="#009900"></TD>
+                  <TD width="1" bgcolor="#009900"></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            </CENTER>
+            <P align="center"><BR>
+    </div>
+
+    <!--ページの上部へ戻るボタン-->
+    <div class="pagetop">
+      <a href="#"><i class="fas fa-angle-double-up"></i></a>
+  </div>
+    </footer>
+    <!-- フッターここまで -->
+
+    <!-- スクリプト -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

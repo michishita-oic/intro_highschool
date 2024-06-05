@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster|Sawarabi+Mincho');
+
+/* 全体の設定 */
+html {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    color: #fff;
+}
+
+header h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    color: #ff0000;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+main {
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-content {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.text-content p {
+    margin: 10px 0;
+}
+
+.text-content .kasd {
+    display: flex;
+    align-items: flex-start;
+}
+
+.text-content .kasd::before {
+    content: 'かすD：';
+    min-width: 80px;
+    margin-right: 10px;
+    text-align: right;
+    color: #ff0000; /* 任意で色を設定できます */
+}
+
+#back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#back-button:hover {
+    background-color: #cc0000;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .nav {
+    margin-bottom: 20px;
+}
+
+footer .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .nav li {
+    display: inline;
+}
+
+footer .nav a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+footer .nav a:hover {
+    background-color: #ff0000;
+    color: #000;
+}
+
+footer .gotop {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0;
+}
